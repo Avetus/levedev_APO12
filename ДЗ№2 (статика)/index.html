@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{%  block main %}
+<ul class="breadcrumb span12">
+	<li><a href="#">Main</a> <span class="divider">/</span></li>
+	<li class="active">Questions</li>
+	</ul>
+   
+      <div class="span9">
+         <div class="page-header">
+            <div class="page-header notop">
+				<h2>Users' questions</h2>
+			</div>
+         </div>
+		
+         <article class="clearfix">
+		 	{% for i in "12345" %}
+            <article class="clearfix">
+				<a class="thumbnail pull-left">
+				<img src="http://lorempixum.com/400/200/sports" width="75" height="75">
+				</a>
+				<header>
+					<h3>How to patch KDE2 under FreeBSD?</h3>
+				</header>
+				<p>
+					Hello, this is a channel about anime? How do I patch KDE2 under FreeBSD?
+				</p>
+			<a href="#">10 answers</a>			
+			<button type="submit" class="btn pull-right my">Like!</button>
+			<h4 class="pull-right">+5</h4>
+			</article>			
+			{% endfor %}
+         </article>
+
+         <div class="pagination">
+            <ul>
+				<li><a href="#">to the beginning</a></li>
+				<li class="active">
+				<a href="#">1</a>
+				</li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">to end</a></li>
+			</ul>
+         </div>
+      </div>
+{% endblock %}
