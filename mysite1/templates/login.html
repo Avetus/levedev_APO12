@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{%  block main %}
+
+    <div class="span9">           
+            <form action="#">
+                <div class="row">
+                    <h3>Please log in</h3>
+
+                    <label for="user_login">Enter your login</label>
+                    <input id="user_login" name="login" value="" />
+                    <span class="required"></span>
+
+                    <label for="user_password">Enter your password</label>
+                    <input id="user_password" name="password" value="" />
+                    <span class="required"></span>
+                </div>
+                <div class="row">
+					<input type="checkbox" id="remember-me" /><label for="remember-me">Remember me?</label>
+                    <input type="submit" id="login_button" class="login_button" value="Sign in" />
+                </div>
+            </form>
+     </div>
+{% endblock %}

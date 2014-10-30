@@ -23,10 +23,11 @@ SECRET_KEY = '+*m=f9kn!ss4o9t_%rua-n+p4ry@-@_)zq_1(42_vi=su^tc50'
 DEBUG = True
 
 TEMPLATE_DEBUG = True
-
 ALLOWED_HOSTS = []
 
-
+TEMPLATE_DIRS = (
+    'D:/mysite1/templates',
+)
 # Application definition
 
 INSTALLED_APPS = (
