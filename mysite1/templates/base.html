@@ -1,0 +1,89 @@
+<html>
+<head>
+	<link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" rel="stylesheet">
+	<style type="text/css">
+	h1.pull-right
+	{
+	padding-left:50px;
+
+	}
+	a.btn.pull-right
+	{
+	margin-left:25px;
+	}
+	input.input-large.search-query
+	{
+	margin-top:5px;
+	}
+	article.clearfix
+	{
+	margin-bottom:10px;
+	}
+	a.thumbnail.pull-left
+	{
+	margin-right:10px;
+	}
+	div.row
+	{
+	margin-top:10px;
+	margin-bottom:10px;
+	}
+	.btn.pull-right.a
+	{
+	margin:15px;
+	}
+	h4.pull-right
+	{
+	margin-right:10px;
+	color:006600;
+	}
+	.btn.pull-right.my
+	{
+	margin-top:5px;
+	}	
+	</style>
+	
+</head>
+<body>
+<div class="container">
+	<div class="row page-header">
+		<form class="form-search pull-left span">	
+			<img src="https://pp.vk.me/c261/g14873115/a_00e0f46b.jpg" width="100" height="100">
+			<h1 class="pull-right">Welcome!</h1>
+		</form>				
+		<form class="form-search pull-right span4">				
+			<a class="btn pull-right" href="http://localhost:8000/login">Log In</a>
+			<a class="btn pull-right" href="http://localhost:8000/signup">Sign Up</a>
+			<a class="btn pull-right" href="http://localhost:8000">Home</a>
+		</form>		
+		<form class="form-search pull-right span4" style="display:none;">			
+			<a class="btn pull-right a" href="http://localhost:8000">Home</a>	
+			<h3 class="pull right">Hello, Username!</h3>			
+		</form>		
+		<form class="form-search pull-right span4">
+			<input type="text" name="search" class="input-large search-query" placeholder="search on the site..." />
+			<button type="submit" class="btn pull-right">Search</button>			
+		</form>
+	</div>
+	<div class="row">
+	{% block main %}
+	{% endblock %}
+
+      <div class="span3">
+		<div>
+			<h3>Popular tags</h3>
+			<a href="#">Hello</a>, <a href="#">world</a>
+		</div>
+		<div>
+			<h3>Top users</h3>
+			<a href="#">Me</a><br>			
+			<a href="#">You</a><br>
+			<a href="#">Pushkin</a>
+		</div>
+		
+      </div>
+   </div>
+
+
+</div>
+</body>

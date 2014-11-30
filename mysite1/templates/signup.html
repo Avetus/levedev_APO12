@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{%  block main %}
+    <div class="span9"> 
+            <form action="#">
+                <div class="row">
+                    <h3>If you do not have a login, please register</h3>
+
+                    <label for="login">Enter your login</label>
+                    <input id="login" name="login" value="" />
+                    <span class="required">*</span>              
+                    <label for="password">Enter your password</label>
+                    <input id="password" name="password" value="" />
+                    <span class="required">*</span>
+
+                    <label for="password_repeat">Repeat your password</label>
+                    <input id="password_repeat" name="password_repeat" value="" />
+                    <span class="required">*</span>
+				</div>
+                <div class="row">
+                    Fields, marked <span class="required">*</span>, are required.
+                </div>
+                <div class="row">
+                    <input type="submit" id="register_button" class="register_button" value="Create an account" />
+                </div>
+            </form>
+      </div>
+	{% endblock %}

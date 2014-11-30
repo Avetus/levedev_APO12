@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{%  block main %}
+<ul class="breadcrumb span12">
+	<li><a href="#">Main</a> <span class="divider">/</span></li>
+	<li class="active">Questions</li>
+	</ul>
+   
+      <div class="span9">
+         <div class="page-header">
+            <div class="page-header notop">
+				<h2>Users' questions</h2>
+			</div>
+         </div>
+		
+         <article class="clearfix">
+		 	{% for i in Question %}
+            <article class="clearfix">
+				<a class="thumbnail pull-left">
+				<img src="http://lorempixum.com/400/200/sports" width="75" height="75">
+				</a>
+				<header>
+					<h3>{{ i.header }}</h3>
+				</header>
+				<p>
+					{{ i.text }}
+				</p>
+			<a href="#">10 answers</a>			
+			<button type="submit" class="btn pull-right my">Like!</button>
+			<h4 class="pull-right">+5</h4>
+			</article>			
+			{% endfor %}
+         </article>
+  
+		<div class="pagination">
+			<span class="step-links">
+				{% if Question.has_previous %}
+					<a href="?page={{ Question.previous_page_number }}">previous</a>
+				{% endif %}
+				<span class="current">
+					Page {{ Question.number }} of {{ Question.paginator.num_pages }}.
+				</span>
+				{% if Question.has_next %}
+					<a href="?page={{ Question.next_page_number }}">next</a>
+				{% endif %}
+			</span>
+		</div>
+
+	  
+	  
+{% endblock %}

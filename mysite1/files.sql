@@ -1,0 +1,11 @@
+LOAD DATA INFILE 'D:\mysite1\user.csv' INTO TABLE User
+  FIELDS TERMINATED BY ' '
+  
+LOAD DATA INFILE 'D:\mysite1\tag.csv' INTO TABLE Tags
+  FIELDS TERMINATED BY ' '
+  
+LOAD DATA INFILE 'D:\mysite\question.csv' INTO TABLE Question
+  FIELDS TERMINATED BY ' '
+
+LOAD DATA INFILE 'D:\mysite1\answer.csv' INTO TABLE Answer
+  FIELDS TERMINATED BY ' '
